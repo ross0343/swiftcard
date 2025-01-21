@@ -9,18 +9,36 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@chec/commerce.js": "^1.0.0",
+    "@radix-ui/react-scroll-area": "^1.2.1",
+    "@radix-ui/react-separator": "^1.1.0",
+    "@radix-ui/react-slot": "^1.1.1",
+    "@radix-ui/react-tabs": "^1.1.2",
+    "@radix-ui/react-toast": "^1.2.4",
+    "@shadcn/ui": "^0.0.4",
+    "@stripe/stripe-js": "^5.5.0",
+    "@types/stripe-v3": "^3.1.33",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "dotenv": "^16.4.7",
+    "embla-carousel-react": "^8.5.1",
+    "lucide-react": "^0.468.0",
+    "next": "^15.0.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "next": "15.0.4"
+    "stripe": "^17.5.0",
+    "tailwind-merge": "^2.5.5",
+    "tailwindcss-animate": "^1.0.7",
+    "zustand": "^5.0.2"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "eslint": "^8",
+    "eslint-config-next": "15.0.4",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
-    "eslint": "^8",
-    "eslint-config-next": "15.0.4"
+    "typescript": "^5"
   }
 }
