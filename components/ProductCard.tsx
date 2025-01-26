@@ -201,7 +201,7 @@ type ProductCardProps = {
       <CardContent className="p-4">
         <Link href={`/products/${product.id}`}>
           <img
-            src={Array.isArray(product.imageUrl) ? product.imageUrl[0] : product.imageUrl || "/placeholder.jpg"}
+            src={Array.isArray(product.) ? product.thumbnail[0] : product.thumbnail || "/placeholder.jpg"}
             alt={product.title}
             className="w-full h-48 object-cover rounded-md"
           />

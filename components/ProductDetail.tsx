@@ -229,8 +229,8 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product }) => {
         {/* Product Images */}
         <div className="space-y-4">
           <h3 className="text-xl font-semibold text-gray-800">Product Images</h3>
-          <div className="flex space-x-4">
-            {product.imageUrl.map((image, index) => (
+          {/* <div className="flex space-x-4">
+            {product.thumbnail.map((image, index) => (
               <img
                 key={index}
                 src={image}
@@ -238,7 +238,30 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product }) => {
                 className="w-60 h-60 object-cover rounded-lg border"
               />
             ))}
-          </div>
+          </div> */}
+          <div className="flex space-x-4">
+  {product.thumbnail ? (
+    Array.isArray(product.thumbnail) ? (
+      product.thumbnail.map((image, index) => (
+        <img
+          key={index}
+          src={image}
+          alt={`Product Thumbnail ${index + 1}`}
+          className="w-60 h-60 object-cover rounded-lg border"
+        />
+      ))
+    ) : (
+      <img
+        src={product.thumbnail}
+        alt="Product Thumbnail"
+        className="w-60 h-60 object-cover rounded-lg border"
+      />
+    )
+  ) : (
+    <p className="text-gray-500">No thumbnails available.</p>
+  )}
+</div>
+
         </div>
 
         {/* Product Information */}
@@ -253,7 +276,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product }) => {
             <span className="font-semibold">Stock Quantity:</span> {product.stock}
           </p>
           <p className="text-lg">
-            <span className="font-semibold">Category:</span> {product.tags}
+            <span className="font-semibold">Category:</span> {product.category}
           </p>
           <p className="text-lg">
             <span className="font-semibold">Sale:</span> {`${product.discountPercentage}%`}

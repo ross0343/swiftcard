@@ -28,7 +28,7 @@ const HomePage = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch("https://template6-six.vercel.app/api/products");
+        const response = await fetch("https://dummyjson.com/products");
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
@@ -93,7 +93,7 @@ const HomePage = () => {
                       className="flex justify-center items-center w-full"
                     >
                       <img
-                        src={product.imageUrl}
+                        src={product.thumbnail}
                         alt={product.title}
                         className="w-full max-w-screen-lg max-h-[400px] sm:max-h-[300px] object-contain rounded-md"
                       />
@@ -127,7 +127,7 @@ const HomePage = () => {
                 className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
               >
                 <img
-                  src={product.imageUrl}
+                  src={product.thumbnail}
                   alt={product.title}
                   className="w-full h-48 object-cover"
                 />
